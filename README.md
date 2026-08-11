@@ -21,10 +21,10 @@
 
 ## 如何替换占位内容
 
-1. **名字/标题**：在 `index.html` 中搜索 "YOUR NAME" 和 "你的名字"，替换为真实姓名
+1. **名字/标题**：已填入「婧婧 / JING JING」，如需修改英文名，在 `index.html` 中搜索 "JING JING" 替换
 2. **个人简介**：在 `index.html` 中找到 `<section id="about">`，替换中英文简介文案
 3. **服务项目**：在 `index.html` 中找到 `<section id="services">`，修改服务名称和描述
-4. **联系方式**：在 `index.html` 中找到 `<section id="contact">`，替换邮箱和社交链接
+4. **联系方式**：邮箱已填入，微信二维码与社交链接为占位（`href="#"`），后续在 `index.html` 中 `<section id="contact">` 替换
 5. **形象图**：将你的照片放入 `assets/` 文件夹，然后在 `index.html` 中替换 `<img>` 的 `src` 属性
 6. **画廊图片**：在 `<section id="gallery">` 中，将渐变占位块替换为真实图片
 

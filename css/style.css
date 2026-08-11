@@ -521,7 +521,6 @@ body.lang-en [data-lang="zh"] {
 
 .hero-title .gold {
     color: var(--color-gold);
-    font-style: italic;
 }
 
 .hero-subtitle {
@@ -1040,6 +1039,7 @@ body.lang-en [data-lang="zh"] {
     height: 44px;
     background-color: var(--color-black);
     border: 1px solid rgba(196, 164, 74, 0.5);
+    border-radius: 50%;
     cursor: pointer;
     z-index: 999;
     display: flex;
@@ -1048,7 +1048,14 @@ body.lang-en [data-lang="zh"] {
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition:
+        opacity 0.35s ease,
+        transform 0.35s ease,
+        visibility 0.35s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -1058,22 +1065,49 @@ body.lang-en [data-lang="zh"] {
     transform: translateY(0);
 }
 
+.back-to-top:hover {
+    background-color: var(--color-gold);
+    border-color: var(--color-gold);
+    box-shadow: 0 6px 24px rgba(196, 164, 74, 0.45);
+}
+
 .back-to-top:active {
     background-color: var(--color-gold);
     border-color: var(--color-gold);
+    box-shadow: 0 4px 16px rgba(196, 164, 74, 0.35);
 }
 
-/* 返回顶部箭头 */
+/* 返回顶部箭头 - span 仅做居中容器，箭头由 ::after 伪元素绘制 */
 .back-to-top-arrow {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+
+/* 箭头由伪元素绘制，实现真正的几何居中 */
+.back-to-top-arrow::after {
+    content: '';
+    position: absolute;
     width: 10px;
     height: 10px;
-    border-left: 2px solid var(--color-gold);
-    border-top: 2px solid var(--color-gold);
-    transform: rotate(45deg) translateY(4px);
+    top: 50%;
+    left: 50%;
+    border-left: 1.5px solid var(--color-gold);
+    border-top: 1.5px solid var(--color-gold);
+    /* 
+     * translate(-50%, calc(-50% - 1px)) puts the pseudo-element center
+     * at the span center, then nudges it up 1px to compensate for the
+     * visual weight bias introduced by the 45deg rotation of the border arrow.
+     * rotate(45deg) turns the top-left corner into an upward-pointing arrow.
+     */
+    transform: translate(-50%, calc(-50% - 1px)) rotate(45deg);
     transition: border-color 0.3s ease;
 }
 
-.back-to-top:active .back-to-top-arrow {
+/* Hover / Active: arrow turns white */
+.back-to-top:hover .back-to-top-arrow::after,
+.back-to-top:active .back-to-top-arrow::after {
     border-color: var(--color-white);
 }
 
