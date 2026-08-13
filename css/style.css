@@ -1077,31 +1077,35 @@ body.lang-en [data-lang="zh"] {
     box-shadow: 0 4px 16px rgba(196, 164, 74, 0.35);
 }
 
-/* 返回顶部箭头 - span 仅做居中容器，箭头由 ::after 伪元素绘制 */
+/* Back-to-top arrow - span acts as a flex centering wrapper */
 .back-to-top-arrow {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 14px;
     height: 14px;
-    display: block;
 }
 
-/* 箭头由伪元素绘制，实现真正的几何居中 */
+/*
+ * Arrow drawn via ::after pseudo-element.
+ *
+ * Visual centering math for the border arrow (8×8 box, 1.5px borders):
+ *   border-left midpoint (0,4) + border-top midpoint (4,0) → visual center ≈ (2,2)
+ *   geometric center = (4,4)
+ *   offset before rotation = (-2,-2) → after 45deg rotation = (0, -2.83)
+ *   The visual center shifts ~2.83px upward after rotation.
+ *   relative positioning top: 3px nudges it down before rotation,
+ *   net deviation ≈ 0.17px — imperceptible.
+ */
 .back-to-top-arrow::after {
     content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 50%;
-    left: 50%;
+    position: relative;
+    top: 3px;
+    width: 8px;
+    height: 8px;
     border-left: 1.5px solid var(--color-gold);
     border-top: 1.5px solid var(--color-gold);
-    /* 
-     * translate(-50%, calc(-50% - 1px)) puts the pseudo-element center
-     * at the span center, then nudges it up 1px to compensate for the
-     * visual weight bias introduced by the 45deg rotation of the border arrow.
-     * rotate(45deg) turns the top-left corner into an upward-pointing arrow.
-     */
-    transform: translate(-50%, calc(-50% - 1px)) rotate(45deg);
+    transform: rotate(45deg);
     transition: border-color 0.3s ease;
 }
 
