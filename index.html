@@ -3,108 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="婧婧 (Z) 个人作品集 - 专业礼仪模特，提供礼仪指导、活动出席、模特走秀与商务礼仪培训服务，诠释优雅与自信的专业形象。">
-    <meta name="theme-color" content="#0d0d0d">
-    <title>Z | 礼仪模特 - 个人作品集</title>
+    <meta name="description" content="婧婧 (JING) 个人作品集 - 专业礼仪模特，提供礼仪指导、活动出席、模特走秀与商务礼仪培训服务。">
+    <meta name="theme-color" content="#fff6f0">
+    <title>婧婧 JING | 礼仪模特</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="lang-zh">
 
     <!-- ============================================================
-         遮罩层（移动端抽屉菜单用）
-         ============================================================ -->
-    <div class="nav-overlay" aria-hidden="true"></div>
-
-    <!-- ============================================================
-         导航栏
+         Navigation
          ============================================================ -->
     <nav class="navbar">
-        <a href="#home" class="nav-logo">Z</a>
+        <a href="#home" class="nav-logo">JING<span class="nav-logo-dot"></span></a>
 
         <ul class="nav-links">
-            <!-- 移动端关闭按钮 -->
-            <li class="nav-drawer-close-wrapper" aria-hidden="true">
-                <button class="nav-drawer-close" aria-label="关闭菜单">
-                    <span></span>
-                    <span></span>
-                </button>
-            </li>
+            <li><a href="#home" data-lang="zh">首页</a><a href="#home" data-lang="en">Home</a></li>
+            <li><a href="#about" data-lang="zh">关于</a><a href="#about" data-lang="en">About</a></li>
+            <li><a href="#services" data-lang="zh">服务</a><a href="#services" data-lang="en">Services</a></li>
+            <li><a href="#gallery" data-lang="zh">作品</a><a href="#gallery" data-lang="en">Gallery</a></li>
+            <li><a href="#contact" data-lang="zh">联系</a><a href="#contact" data-lang="en">Contact</a></li>
 
-            <li><a href="#home" data-lang="zh" data-index="01">首页</a><a href="#home" data-lang="en" data-index="01">Home</a></li>
-            <li><a href="#about" data-lang="zh" data-index="02">关于</a><a href="#about" data-lang="en" data-index="02">About</a></li>
-            <li><a href="#services" data-lang="zh" data-index="03">服务</a><a href="#services" data-lang="en" data-index="03">Services</a></li>
-            <li><a href="#gallery" data-lang="zh" data-index="04">作品</a><a href="#gallery" data-lang="en" data-index="04">Gallery</a></li>
-            <li><a href="#contact" data-lang="zh" data-index="05">联系</a><a href="#contact" data-lang="en" data-index="05">Contact</a></li>
-
-            <!-- 桌面端语言切换 -->
             <li class="nav-lang-desktop">
                 <button class="lang-toggle" aria-label="切换语言">EN</button>
             </li>
-
-            <!-- 移动端抽屉底部语言切换 -->
-            <li class="nav-drawer-lang" aria-hidden="true">
-                <button class="lang-toggle-drawer" aria-label="切换语言">EN</button>
-            </li>
         </ul>
-
-        <!-- 汉堡菜单按钮 -->
-        <button class="menu-toggle" aria-label="菜单">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
     </nav>
 
     <!-- ============================================================
-         Hero 区域
+         Hero
          ============================================================ -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <span class="hero-ornament"></span>
+            <span class="hero-badge" data-lang="zh">礼仪模特</span>
+            <span class="hero-badge" data-lang="en">Etiquette Model</span>
+
             <h1 class="hero-title">
-                <span data-lang="zh">婧<span class="gold">婧</span></span>
-                <span data-lang="en">JING <span class="gold">JING</span></span>
+                <span data-lang="zh">婧婧</span>
+                <span data-lang="en">JING JING</span>
             </h1>
-            <p class="hero-subtitle" data-lang="zh">礼仪模特</p>
-            <p class="hero-subtitle" data-lang="en">Etiquette Model</p>
+
             <p class="hero-tagline" data-lang="zh">优雅 · 专业 · 自信</p>
             <p class="hero-tagline" data-lang="en">Grace · Professionalism · Confidence</p>
+
+            <a href="#about" class="hero-cta">
+                <span data-lang="zh">了解更多</span>
+                <span data-lang="en">Learn More</span>
+            </a>
         </div>
 
-        <!-- 滚动提示 -->
-        <div class="scroll-indicator">
-            <span data-lang="zh">向下探索</span>
-            <span data-lang="en">Scroll Down</span>
-            <div class="scroll-line"></div>
+        <!-- Portrait image -->
+        <div class="hero-portrait">
+            <img src="assets/web/gallery-1.jpg" alt="Portrait of JING JING">
         </div>
     </section>
 
     <!-- ============================================================
-         About 区域
+         About
          ============================================================ -->
     <section id="about" class="section">
         <div class="section-header reveal">
-            <span class="section-number" data-lang="zh">01 / 关于我</span>
-            <span class="section-number" data-lang="en">01 / About Me</span>
+            <span class="section-label" data-lang="zh">关于我</span>
+            <span class="section-label" data-lang="en">About Me</span>
             <h2 class="section-title" data-lang="zh">不止于姿态</h2>
             <h2 class="section-title" data-lang="en">Beyond Posture</h2>
-            <span class="section-ornament"></span>
         </div>
 
         <div class="about-grid">
-            <!-- 形象图占位 -->
             <div class="about-image-wrapper reveal reveal-delay-1">
                 <div class="about-image">
-                    <div class="about-image-frame"></div>
-                    <div class="about-image-placeholder">
-                        <span class="icon">&#9733;</span>
-                        <span data-lang="zh">形象照片</span>
-                        <span data-lang="en">Portrait Photo</span>
-                    </div>
+                    <img src="assets/web/gallery-2.jpg" alt="Portrait photo of JING JING" loading="lazy">
                 </div>
             </div>
 
-            <!-- 简介文字 -->
             <div class="about-text reveal reveal-delay-2">
                 <p class="about-intro" data-lang="zh">
                     以专业的仪态与自信的姿态，诠释每一次出场的独特魅力。
@@ -128,19 +98,18 @@
                     is a testament to professionalism.
                 </p>
 
-                <!-- 数据统计 -->
                 <div class="about-stats">
-                    <div class="stat-item">
+                    <div class="stat-card">
                         <span class="stat-number">5+</span>
                         <span class="stat-label" data-lang="zh">年从业经验</span>
                         <span class="stat-label" data-lang="en">Years Experience</span>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-card">
                         <span class="stat-number">200+</span>
                         <span class="stat-label" data-lang="zh">活动场次</span>
                         <span class="stat-label" data-lang="en">Events</span>
                     </div>
-                    <div class="stat-item">
+                    <div class="stat-card">
                         <span class="stat-number">50+</span>
                         <span class="stat-label" data-lang="zh">合作品牌</span>
                         <span class="stat-label" data-lang="en">Brand Partners</span>
@@ -151,21 +120,21 @@
     </section>
 
     <!-- ============================================================
-         Services 区域
+         Services
          ============================================================ -->
-    <section id="services" class="section">
+    <section id="services" class="section section-alt">
         <div class="section-header reveal">
-            <span class="section-number" data-lang="zh">02 / 服务项目</span>
-            <span class="section-number" data-lang="en">02 / Services</span>
+            <span class="section-label" data-lang="zh">服务项目</span>
+            <span class="section-label" data-lang="en">Services</span>
             <h2 class="section-title" data-lang="zh">专业服务</h2>
             <h2 class="section-title" data-lang="en">Professional Services</h2>
-            <span class="section-ornament"></span>
         </div>
 
         <div class="services-grid">
-            <!-- 服务 1 -->
             <div class="service-card reveal reveal-delay-1">
-                <span class="service-number">01</span>
+                <span class="service-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L4.8 8.3l5-.7z"/></svg>
+                </span>
                 <h3 class="service-name" data-lang="zh">礼仪指导</h3>
                 <h3 class="service-name" data-lang="en">Etiquette Coaching</h3>
                 <p class="service-desc" data-lang="zh">
@@ -176,9 +145,10 @@
                 </p>
             </div>
 
-            <!-- 服务 2 -->
             <div class="service-card reveal reveal-delay-2">
-                <span class="service-number">02</span>
+                <span class="service-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="9" width="16" height="12" rx="2"/><path d="M9 9V7a3 3 0 0 1 6 0v2"/></svg>
+                </span>
                 <h3 class="service-name" data-lang="zh">活动出席</h3>
                 <h3 class="service-name" data-lang="en">Event Appearance</h3>
                 <p class="service-desc" data-lang="zh">
@@ -189,9 +159,10 @@
                 </p>
             </div>
 
-            <!-- 服务 3 -->
             <div class="service-card reveal reveal-delay-3">
-                <span class="service-number">03</span>
+                <span class="service-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12M7 3v18M5 21h14M7 9l5 3 5-3"/></svg>
+                </span>
                 <h3 class="service-name" data-lang="zh">模特走秀</h3>
                 <h3 class="service-name" data-lang="en">Runway Modeling</h3>
                 <p class="service-desc" data-lang="zh">
@@ -202,9 +173,10 @@
                 </p>
             </div>
 
-            <!-- 服务 4 -->
             <div class="service-card reveal reveal-delay-4">
-                <span class="service-number">04</span>
+                <span class="service-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16v10H4z"/><path d="M8 7V5h8v2M12 11v3"/></svg>
+                </span>
                 <h3 class="service-name" data-lang="zh">商务礼仪培训</h3>
                 <h3 class="service-name" data-lang="en">Business Etiquette</h3>
                 <p class="service-desc" data-lang="zh">
@@ -218,60 +190,54 @@
     </section>
 
     <!-- ============================================================
-         Gallery 区域
+         Gallery
          ============================================================ -->
     <section id="gallery" class="section">
         <div class="section-header reveal">
-            <span class="section-number" data-lang="zh">03 / 作品集</span>
-            <span class="section-number" data-lang="en">03 / Portfolio</span>
+            <span class="section-label" data-lang="zh">作品集</span>
+            <span class="section-label" data-lang="en">Portfolio</span>
             <h2 class="section-title" data-lang="zh">精选瞬间</h2>
             <h2 class="section-title" data-lang="en">Selected Moments</h2>
-            <span class="section-ornament"></span>
         </div>
 
         <div class="gallery-grid">
-            <!-- 画廊项 1 -->
             <div class="gallery-item reveal reveal-delay-1">
+                <img src="assets/web/gallery-3.jpg" alt="Portfolio photo 1" loading="lazy">
                 <div class="gallery-overlay">
                     <span data-lang="zh">查看大图</span>
                     <span data-lang="en">View</span>
                 </div>
             </div>
-
-            <!-- 画廊项 2 -->
             <div class="gallery-item reveal reveal-delay-1">
+                <img src="assets/web/gallery-4.jpg" alt="Portfolio photo 2" loading="lazy">
                 <div class="gallery-overlay">
                     <span data-lang="zh">查看大图</span>
                     <span data-lang="en">View</span>
                 </div>
             </div>
-
-            <!-- 画廊项 3 -->
             <div class="gallery-item reveal reveal-delay-2">
+                <img src="assets/web/gallery-5.jpg" alt="Portfolio photo 3" loading="lazy">
                 <div class="gallery-overlay">
                     <span data-lang="zh">查看大图</span>
                     <span data-lang="en">View</span>
                 </div>
             </div>
-
-            <!-- 画廊项 4 -->
             <div class="gallery-item reveal reveal-delay-2">
+                <img src="assets/web/gallery-6.jpg" alt="Portfolio photo 4" loading="lazy">
                 <div class="gallery-overlay">
                     <span data-lang="zh">查看大图</span>
                     <span data-lang="en">View</span>
                 </div>
             </div>
-
-            <!-- 画廊项 5 -->
             <div class="gallery-item reveal reveal-delay-3">
+                <img src="assets/web/gallery-7.jpg" alt="Portfolio photo 5" loading="lazy">
                 <div class="gallery-overlay">
                     <span data-lang="zh">查看大图</span>
                     <span data-lang="en">View</span>
                 </div>
             </div>
-
-            <!-- 画廊项 6 -->
             <div class="gallery-item reveal reveal-delay-3">
+                <img src="assets/web/gallery-8.jpg" alt="Portfolio photo 6" loading="lazy">
                 <div class="gallery-overlay">
                     <span data-lang="zh">查看大图</span>
                     <span data-lang="en">View</span>
@@ -281,18 +247,17 @@
     </section>
 
     <!-- ============================================================
-         Contact 区域
+         Contact
          ============================================================ -->
-    <section id="contact" class="section">
+    <section id="contact" class="section section-alt">
         <div class="section-header reveal">
-            <span class="section-number" data-lang="zh">04 / 联系方式</span>
-            <span class="section-number" data-lang="en">04 / Contact</span>
+            <span class="section-label" data-lang="zh">联系方式</span>
+            <span class="section-label" data-lang="en">Contact</span>
             <h2 class="section-title" data-lang="zh">期待合作</h2>
             <h2 class="section-title" data-lang="en">Let's Work Together</h2>
-            <span class="section-ornament"></span>
         </div>
 
-        <div class="contact-grid reveal reveal-delay-1">
+        <div class="contact-card reveal reveal-delay-1">
             <p class="contact-intro" data-lang="zh">
                 无论您是品牌方、活动策划团队还是寻求礼仪培训的企业，
                 欢迎通过以下方式与我取得联系。期待与您共创精彩。
@@ -302,26 +267,23 @@
                 feel free to reach out. I look forward to creating something remarkable together.
             </p>
 
-            <div class="contact-links">
-                <a href="mailto:17513398007@163.com" class="contact-link">
-                    17513398007@163.com
-                </a>
-                <span style="color: var(--color-text-light); font-size: var(--fs-small); margin: 0.5rem 0;" data-lang="zh">
-                    或扫描下方二维码添加微信
-                </span>
-                <span style="color: var(--color-text-light); font-size: var(--fs-small); margin: 0.5rem 0;" data-lang="en">
-                    Or scan the QR code to add WeChat
-                </span>
-            </div>
+            <a href="mailto:17513398007@163.com" class="contact-email">
+                17513398007@163.com
+            </a>
 
-            <!-- 社交链接 -->
+            <p class="contact-hint" data-lang="zh">
+                或扫描下方二维码添加微信
+            </p>
+            <p class="contact-hint" data-lang="en">
+                Or scan the QR code to add WeChat
+            </p>
+
             <div class="contact-social">
-                <a href="#" class="social-link" aria-label="小红书" data-lang="zh">小红书</a>
-                <a href="#" class="social-link" aria-label="Xiaohongshu" data-lang="en">RED</a>
-
-                <a href="#" class="social-link" aria-label="Instagram">IG</a>
-                <a href="#" class="social-link" aria-label="微博" data-lang="zh">微博</a>
-                <a href="#" class="social-link" aria-label="Weibo" data-lang="en">WB</a>
+                <a href="#" class="social-link" data-lang="zh">小红书</a>
+                <a href="#" class="social-link" data-lang="en">RED</a>
+                <a href="#" class="social-link">IG</a>
+                <a href="#" class="social-link" data-lang="zh">微博</a>
+                <a href="#" class="social-link" data-lang="en">WB</a>
             </div>
         </div>
     </section>
@@ -330,7 +292,6 @@
          Footer
          ============================================================ -->
     <footer class="footer">
-        <span class="footer-ornament"></span>
         <p class="footer-text" data-lang="zh">
             &copy; 2026 婧婧 · 保留所有权利
         </p>
@@ -340,7 +301,7 @@
     </footer>
 
     <!-- ============================================================
-         返回顶部按钮
+         Back to top
          ============================================================ -->
     <button class="back-to-top" aria-label="返回顶部">
         <span class="back-to-top-arrow"></span>
