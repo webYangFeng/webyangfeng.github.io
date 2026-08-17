@@ -6,8 +6,8 @@
    移动优先设计
    ============================================================ */
 
-/* ---------- Google Fonts ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+/* Fonts are loaded via <link> in the HTML head for earlier loading.
+   The system font fallbacks below match the target fonts to minimize FOUT. */
 
 /* ---------- CSS 自定义属性 ---------- */
 :root {
@@ -24,8 +24,8 @@
     --color-white: #ffffff;
 
     /* 字体 */
-    --font-display: 'Poppins', 'Noto Sans SC', sans-serif;
-    --font-body: 'Inter', 'Noto Sans SC', sans-serif;
+    --font-display: 'Poppins', 'Noto Sans SC', system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    --font-body: 'Inter', 'Noto Sans SC', system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
 
     /* 间距 */
     --spacing-xs: 0.5rem;
@@ -118,7 +118,8 @@ body.lang-en [data-lang="zh"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
+    transition: background-color 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease,
+        backdrop-filter 0.35s ease, -webkit-backdrop-filter 0.35s ease;
 }
 
 .navbar.scrolled {
@@ -329,6 +330,13 @@ body.lang-en .hero-title {
     height: 100%;
     object-fit: cover;
     display: block;
+    /* Fade in once loaded to avoid a flash from placeholder to photo */
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hero-portrait img.loaded {
+    opacity: 1;
 }
 
 .hero-portrait::after {
@@ -520,7 +528,6 @@ body.lang-en .hero-title {
     aspect-ratio: 3 / 4;
     border-radius: var(--radius-md);
     overflow: hidden;
-    cursor: pointer;
     background: linear-gradient(150deg, #ffe3db 0%, #ffd0c2 100%);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -549,27 +556,6 @@ body.lang-en .hero-title {
 
 .gallery-item:nth-child(3n) {
     background: linear-gradient(150deg, #ffe8d0 0%, #ffd9ae 100%);
-}
-
-.gallery-overlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(47, 42, 38, 0.4);
-    font-family: var(--font-display);
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--color-white);
-    letter-spacing: 0.06em;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1;
-}
-
-.gallery-item:hover .gallery-overlay {
-    opacity: 1;
 }
 
 /* ---------- Contact ---------- */

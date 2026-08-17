@@ -92,6 +92,20 @@
         });
     }
 
+    // ---------- Hero portrait fade-in ----------
+    // Fade the hero image in once loaded to avoid a placeholder-to-photo flash
+    const heroPortraitImg = document.querySelector('.hero-portrait img');
+
+    if (heroPortraitImg) {
+        if (heroPortraitImg.complete && heroPortraitImg.naturalWidth > 0) {
+            heroPortraitImg.classList.add('loaded');
+        } else {
+            heroPortraitImg.addEventListener('load', function () {
+                heroPortraitImg.classList.add('loaded');
+            });
+        }
+    }
+
     // ---------- 滚动渐显动画 (Intersection Observer) ----------
     const revealElements = document.querySelectorAll('.reveal');
 
